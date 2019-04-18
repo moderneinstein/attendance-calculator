@@ -75,7 +75,7 @@
 				document.form.absent.focus() ;
 				return false;
 			}
-			if(absent > conducted){
+			if(parseInt(absent) > parseInt(conducted)){
 				alert("Number of hours absent cannot be greater than hours conducted.")
 				document.form.absent.focus();
 				return false;
@@ -84,7 +84,7 @@
 			if(percent < 75)
 				var to_attend = absent*4 - conducted;
 			var current = percent;
-			current = current.toFixed(2);
+			current = Math.round(current*100) / 100;
 			var count = 0;
 			while(percent > 75){
 				if(attendance(conducted+1, absent+1) < 75)	break;
