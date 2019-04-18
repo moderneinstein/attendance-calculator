@@ -75,6 +75,11 @@
 				document.form.absent.focus() ;
 				return false;
 			}
+			if(absent > conducted){
+				alert("Number of hours absent cannot be greater than hours conducted.")
+				document.form.absent.focus();
+				return false;
+			}
 			var percent = attendance(conducted, absent);
 			if(percent < 75)
 				var to_attend = absent*4 - conducted;
