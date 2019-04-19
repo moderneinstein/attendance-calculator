@@ -99,10 +99,13 @@
 			else if(count == 1)
 				alert("Current Attendance = " + current + "%\n"
 					 + "You can miss " + count + " class.");
-			else
+			else if(current < 75)
 				alert("Current Attendance = " + current + "%\n"
 					 + "You cannot miss any class.\n"
 					 + "You need to attend " + to_attend + " more classes for 75% attendance.")
+			else
+				alert("Current Attendance = " + current + "%\n"
+					 + "You cannot miss any class.\n");
 		}
 	</script>
 </body>
