@@ -33,17 +33,27 @@ function check(){
 		conducted++;
 		percent = attendance(conducted, absent);
 	}
-	if(count > 1)
-		alert("Current Attendance = " + current + "%\n"
-				+ "You can miss " + count + " classes.");
+	document.querySelector('.showResult').innerHTML = "Current Attendance = " + current + "%";
+	if(count > 1){
+		
+		document.querySelector('.showDescription').innerHTML = "You can miss " + count + " class.";
+
+	}
 	else if(count == 1)
-		alert("Current Attendance = " + current + "%\n"
-				+ "You can miss " + count + " class.");
-	else if(current < 75)
-		alert("Current Attendance = " + current + "%\n"
-				+ "You cannot miss any class.\n"
-				+ "You need to attend " + to_attend + " more classes for 75% attendance.")
-	else
-		alert("Current Attendance = " + current + "%\n"
-				+ "You cannot miss any class.\n");
+	{
+		
+		document.querySelector('.showDescription').innerHTML = "You can miss " + count + " class.";
+
+	}
+	else if(current < 75){
+		
+		document.querySelector('.showDescription').innerHTML = "You cannot miss any class.\n" + "You need to attend " + to_attend + " more classes for 75% attendance.";
+
+	}
+	else{
+		
+		document.querySelector('.showDescription').innerHTML = "You cannot miss any class.";
+	}
+	
+		return false;
 }

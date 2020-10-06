@@ -1,22 +1,59 @@
 <!DOCTYPE html>
-<html>
+<ht
+ml>
 <head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
 	<title>Attendance</title>
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<b><font size=6>Attendance Calculator</font></b>
-	<a href="https://academia.srmist.edu.in/#View:My_Attendance" target="_blank">
-		<button>SRM Academia</button>
+	<a class="a" href="https://academia.srmist.edu.in/#View:My_Attendance" target="_blank">
+		<h6 style="height: 0px;width:0px;font-weight: bolder;">SRM Academia</h6>
 	</a>
 	<hr><br><br>
 	<form name="form" onsubmit="return check()">
-		Enter number of total hours Conducted:	<br><br>
-		<input type="number" name="conducted" min="1">	<br><br>
-		Enter number of hours Absent:			<br><br>
-		<input type="number" name="absent" min="0">		<br><br>
-		<input type="submit" name="submit" value="Check">
+		Number of total hours Conducted	<br>
+		<input type="number" class="text-muted" name="conducted" min="1" placeholder="Check academia if not sure">	<br><br>
+		Number of hours Absent			<br>
+		<input type="number" class="text-muted" name="absent" min="0" placeholder="Check academia if not sure">		<br><br>
+		<input type="submit" name="submit" class="btn btn-lg btn-info" style="width:100%;" value="Check">
 	</form>
+	<center style="font-size:x-large;cursor: pointer;">
+		<b><div class="showResult text-primary m-3"></div></b>
+		<div class="showDescription text-secondary" style="font-size: large;"></div>
+	</center>
+
+  <!-- Site footer -->
+  <footer class="site-footer">
+	<!-- <div class="container">
+	  <div class="row">
+		<div class="col-sm-12 col-md-6">
+		  <h6>About</h6>
+		  <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+		</div>
+
+
+	  </div>
+	  <hr>
+	</div> -->
+	<div class="container">
+	  <div class="row">
+		  <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by <a href="https://www.linkedin.com/in/harsh-srivastva/" target="_blank">Harsh</a> | <a href="https://www.linkedin.com/in/ashutosh3309/" target="_blank">Ashutosh</a>
+		  </p>
+
+		
+	  </div>
+	</div>
+</footer>
+	
+
 	<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
