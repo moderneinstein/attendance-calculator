@@ -34,24 +34,20 @@ function check(){
 		percent = attendance(conducted, absent);
 	}
 	document.querySelector('.showResult').innerHTML = "Current Attendance = " + current + "%";
-	if(count > 1){
-		
+	if(count > 1){	
 		document.querySelector('.showDescription').innerHTML = "You can miss " + count + " class.";
 
 	}
 	else if(count == 1)
 	{
-		
 		document.querySelector('.showDescription').innerHTML = "You can miss " + count + " class.";
 
 	}
 	else if(current < 75){
-		
 		document.querySelector('.showDescription').innerHTML = "You cannot miss any class.\n" + "You need to attend " + to_attend + " more classes for 75% attendance.";
 
 	}
-	else{
-		
+	else{	
 		document.querySelector('.showDescription').innerHTML = "You cannot miss any class.";
 	}
 	
